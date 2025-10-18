@@ -1,0 +1,9 @@
+services:
+    chrobinson:
+        container_name: chrobinson
+        build: .
+        restart: unless-stopped
+        tty: true
+        
+        ports:
+            - "3818:8000"
