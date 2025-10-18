@@ -7,7 +7,7 @@ export const handler = {
 
         let { country } = ctx.params;
 
-        if (!country || typeof country !== "string") return new Response(JSON.stringify({
+        if (!country || typeof country !== "string" || country.length > 5) return new Response(JSON.stringify({
             error: "Country parameter is required and must be a valid string."
         }), { status: 400 });
 
