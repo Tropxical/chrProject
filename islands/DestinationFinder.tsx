@@ -12,6 +12,8 @@ export default function DestinationFinder() {
     async function handleSubmit(e: Event) {
         e.preventDefault();
 
+        if (country.length <= 0) return setStatus("Please enter a valid country code.")
+
         setStatus("Loading...");
         setResult("")
 
