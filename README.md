@@ -50,5 +50,5 @@ When it comes to software engineering applications, my biggest challenge has alw
 
 So finally, I'd like to extend my gratitude and thank you for the opportunity. I look forward to meeting everyone this Monday, and to going through this entire project.
 
-Cheers!
+Cheers!<br />
 Hoang Le
