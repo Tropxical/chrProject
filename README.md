@@ -21,8 +21,8 @@ For the backend, the primary language is JavaScript with the Deno runtime. The p
 ### API Handling
 For an enterprise environment where uptime and understandability matter the most, I usually like to have a dedicated endpoint that is version controlled. This can either be done via a subdomain or an explicit path.
 
-https://api.example.com/v1/
-https://example.com/api/v1/
+- https://api.example.com/v1/
+- https://example.com/api/v1/
 
 However for this project you'll notice that anything following the root path is the API. I did this in accordance to the project's requirements.
 
