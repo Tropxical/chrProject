@@ -6,8 +6,8 @@ A fully published version can be found at https://chr.tropxical.com/
 
 This project required me to either;
 
-- A. Create a standalone backend API
-- B. Create a frontend application, which does all of the logic client-side.
+- Create a standalone backend API
+- Create a frontend application, which does all of the logic client-side.
 
 I decided to do both (Frontend isn't that pretty, given the time constraints.)
 
