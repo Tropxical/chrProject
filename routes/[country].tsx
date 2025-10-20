@@ -25,7 +25,7 @@ export const handler = {
             destination: country,
             list: getDestination,
             routeDistance
-        }))
+        }), { status: 200 });
         
     }
 }
