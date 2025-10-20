@@ -11,7 +11,6 @@ export const NeighborMap = {
     PAN: [ "CRI" ],
 };
 
-
 export const countryDistanceMap = {
     CAN: 2,
     USA: 2,
@@ -24,8 +23,6 @@ export const countryDistanceMap = {
     CRI: 12,
     PAN: 14,
 }
-
-
 
 export const findDestination = (origin, destination) => {
 
@@ -60,9 +57,7 @@ export const getDistance = (routeArray) => {
         const currDistance = countryDistanceMap[country]
 
         return distance += currDistance
-
     }, 0)
-
 
     return totalDistance
 
