@@ -11,6 +11,22 @@ export const NeighborMap = {
     PAN: [ "CRI" ],
 };
 
+
+export const countryDistanceMap = {
+    CAN: 2,
+    USA: 2,
+    MEX: 4,
+    BLZ: 6,
+    GTM: 6,
+    SLV: 8,
+    HND: 8,
+    NIC: 10,
+    CRI: 12,
+    PAN: 14,
+}
+
+
+
 export const findDestination = (origin, destination) => {
 
     const visitedNeighbors = new Set();
@@ -33,5 +49,21 @@ export const findDestination = (origin, destination) => {
     }
 
     return null
+
+}
+
+export const getDistance = (routeArray) => {
+
+    if (!routeArray || typeof routeArray !== "object" || routeArray.length == 0) return 0
+
+    const totalDistance = routeArray.reduce((distance, country) => {
+        const currDistance = countryDistanceMap[country]
+
+        return distance += currDistance
+
+    }, 0)
+
+
+    return totalDistance
 
 }

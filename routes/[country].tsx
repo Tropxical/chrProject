@@ -1,6 +1,6 @@
 import { Context } from "fresh"
 
-import { findDestination } from "../modules/bfsCountries.js"
+import { findDestination, getDistance } from "../modules/bfsCountries.js"
 
 export const handler = {
     GET(ctx: Context<any>) {
@@ -14,6 +14,7 @@ export const handler = {
         country = country.toUpperCase();
 
         const getDestination = findDestination("USA", country);
+        const routeDistance = getDistance(getDestination)
 
         if (!getDestination) return new Response(JSON.stringify({
             error: "No valid destination found for the specified country, please try again."
@@ -22,7 +23,8 @@ export const handler = {
 
         return new Response(JSON.stringify({
             destination: country,
-            list: getDestination
+            list: getDestination,
+            routeDistance
         }))
         
     }
